@@ -1,16 +1,11 @@
 package com.javastudio.tutorial.jdbc.dao;
 
 import com.javastudio.tutorial.jdbc.model.Customer;
-import com.javastudio.tutorial.jdbc.service.CustomerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.ResultSetExtractor;
 
 import javax.sql.DataSource;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Collections;
 import java.util.List;
 
@@ -45,7 +40,7 @@ public class CustomerDao {
         return jdbcTemplate.queryForObject("SELECT count(*) FROM customer", Integer.class);
     }
 
-    void f() {
+    void dummy() {
         try {
             LOGGER.info("Creating tables ...");
             jdbcTemplate.execute("DROP TABLE IF EXISTS customer");
